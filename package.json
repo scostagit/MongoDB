@@ -1,0 +1,19 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "\"# mongodb\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scostagit/mongodb.git"
+  },
+  "author": "sergio costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scostagit/mongodb/issues"
+  },
+  "homepage": "https://github.com/scostagit/mongodb#readme"
+}
