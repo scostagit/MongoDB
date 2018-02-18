@@ -1,0 +1,114 @@
+mongod --dbpath=C:\data
+
+MONGODB
+https://www.mongodb.org/
+Dowload
+https://www.mongodb.org/downloads
+
+NODEJS TOOLS FOR VS
+node js tools for visual studio
+https://nodejstools.codeplex.com/
+
+Abrir dois dos.
+1=> Subir o servidor MongoDB Host
+
+C:\MongoDB\bin> mongod --dbpath=C:\data
+
+2=> consumir o mongo. Quando digita mongo, ele por defualt é localhost.
+se quiser consumir remoto digite o endereço
+C:\MongoDB\bin> mongo
+
+ver todos os bandos de dados
+show dbs
+
+bando de dados atual
+db
+
+criando colletion(tabela)
+db.createCollection("TB_AMIGO")
+
+mostras as coleçoes
+show Collections
+
+deletar colletion
+db.TB_AMIGO.drop()
+
+deletar banco
+db.dropDatabase()
+
+
+mudar de bando
+use nome_banco: ex:
+use sisamigos
+
+OBERSVACOES
+Os bancos existes vritualmente. noa existme fisciamente ate vc persitir os dados.
+Para exlcuir o bando vc precisa esta dentro dele
+tudo que comçea com "_" é do proprio mongoDB ex. "_id"
+pegar todos os comandos so MongoDB: db. + TAB TAB
+NAo tem controle Trnascional, é no C# que vc faz o controle transcional
+
+
+https://nodejstools.codeplex.com/
+
+
+
+Banco MONGODB Cliente
+
+--Criar Banco
+use sisclientes
+
+--Cria Collection
+db.createCollection("TB_CLIENTE")
+
+--Inserir Cliente
+db.TB_CLIENTE.insert({  "NM_CLIENTE":"ZINA" , "DS_EMAIL":"zina@hotmail.com", "DT_NASCIMENTO":"20-09-2992", "NR_TELEFONE":"8877-0999" })
+db.TB_CLIENTE.insert({  "NM_CLIENTE":"ZINA" , "DS_EMAIL":"zina@hotmail.com", "DT_NASCIMENTO":"20-09-2992", "NR_TELEFONE":"8877-0999" })
+db.TB_CLIENTE.insert({  "NM_CLIENTE":"ZINA" , "DS_EMAIL":"zina@hotmail.com", "DT_NASCIMENTO":"20-09-2992", "NR_TELEFONE":"8877-0999" })
+db.TB_CLIENTE.insert({  "NM_CLIENTE":"ZINA" , "DS_EMAIL":"zina@hotmail.com", "DT_NASCIMENTO":"20-09-2992", "NR_TELEFONE":"8877-0999" })
+db.TB_CLIENTE.insert({  "NM_CLIENTE":"sergio" , "DS_EMAIL":"zina@hotmail.com", "DT_NASCIMENTO":"20-09-2992", "NR_TELEFONE":"8877-0999" })
+
+
+db.TB_CLIENTE.insert({  "IDADE":18 })
+
+--select
+
+db.TB_CLIENTE.find()
+
+para exibir JSON view
+
+db.TB_CLIENTE.find().pretty()
+
+Google
+RoboMongo - Ferramente Grafica = ManagerSQL
+http://robomongo.org/
+
+--Select com Where
+db.TB_CLIENTE.find({ "NM_CLIENTE":"sergio" }).pretty()
+
+--Select pro cmaps
+db.TB_CLIENTE.find({ }, {"NM_CLIENTE":1, "DS_EMAIL":1}).pretty()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
