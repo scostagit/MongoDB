@@ -1,0 +1,13 @@
+quando vc tem um hash em javacript e seta os valores
+db.alunos.find({"cursos.nome":"Financas"},{"cursos.nome":"Sistema de informacao"})
+
+o ulitmo subtitui o primeiro. o valor de cursos.nome e sistema de informacao.
+
+para fazer or precisamos separar os arrays
+
+db.alunos.find({
+     $or : [
+                {"cursos.nome":"Financas"},
+                {"cursos.nome":"Sistema de informacao"}
+            ]
+}).pretty()

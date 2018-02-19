@@ -1,0 +1,34 @@
+update array
+
+db.alunos.find(  {"_id" : ObjectId("5a8a0ce13cf90118c4e07ccc")}).pretty()
+
+db.alunos.update(
+     {"_id" : ObjectId("5a8a0ce13cf90118c4e07ccc")},
+     {
+        $push:{
+            notas:8.5
+        }
+     }
+)
+
+//nao adicona se existe. nao repiata
+db.alunos.update(
+     {"_id" : ObjectId("5a8a0ce13cf90118c4e07ccc")},
+     {
+        $addToSet:{
+            notas:8.5
+        }
+     }
+)
+
+//update de array inteiro
+db.alunos.update(
+     {"_id" : ObjectId("5a8a0ce13cf90118c4e07ccc")},
+     {
+        $push:{
+            notas:{$each:[8,5, 3]}
+        }
+     }
+)
+
+

@@ -1,0 +1,1 @@
+db.alunos.find({"nome":"James", "habilidades.nome":"ingles"}) 

@@ -6,7 +6,7 @@ Dowload
 https://www.mongodb.org/downloads
 
 NODEJS TOOLS FOR VS
-node js tools for visual studio
+node js tools for visual studiod
 https://nodejstools.codeplex.com/
 
 Abrir dois dos.
@@ -14,8 +14,8 @@ Abrir dois dos.
 
 C:\MongoDB\bin> mongod --dbpath=C:\data
 
-2=> consumir o mongo. Quando digita mongo, ele por defualt é localhost.
-se quiser consumir remoto digite o endereço
+2=> consumir o mongo. Quando digita mongo, ele por defualt ï¿½ localhost.
+se quiser consumir remoto digite o endereï¿½o
 C:\MongoDB\bin> mongo
 
 ver todos os bandos de dados
@@ -27,7 +27,7 @@ db
 criando colletion(tabela)
 db.createCollection("TB_AMIGO")
 
-mostras as coleçoes
+mostras as coleï¿½oes
 show Collections
 
 deletar colletion
@@ -44,9 +44,9 @@ use sisamigos
 OBERSVACOES
 Os bancos existes vritualmente. noa existme fisciamente ate vc persitir os dados.
 Para exlcuir o bando vc precisa esta dentro dele
-tudo que comçea com "_" é do proprio mongoDB ex. "_id"
+tudo que comï¿½ea com "_" ï¿½ do proprio mongoDB ex. "_id"
 pegar todos os comandos so MongoDB: db. + TAB TAB
-NAo tem controle Trnascional, é no C# que vc faz o controle transcional
+NAo tem controle Trnascional, ï¿½ no C# que vc faz o controle transcional
 
 
 https://nodejstools.codeplex.com/

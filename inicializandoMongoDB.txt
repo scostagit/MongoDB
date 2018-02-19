@@ -1,0 +1,5 @@
+//server
+mongod --dbpath=C:\data
+
+//client
+mongo

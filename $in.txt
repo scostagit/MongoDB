@@ -1,0 +1,6 @@
+db.alunos.find({
+    "cursos.nome": {
+            $in:["Financas","Sistema de informacao"]
+            }
+   
+}).pretty()

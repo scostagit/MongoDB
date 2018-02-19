@@ -1,0 +1,31 @@
+//Select * from --select all
+db.alunos.find()
+
+//formatter
+db.alunos.find().pretty()
+
+//filtros
+db.alunos.find({"nome":"Sergio"})  
+
+//filtro sub query
+db.alunos.find({"habilidades.nome":"ingles"}) 
+
+//and nome
+db.alunos.find({"nome":"James", "habilidades.nome":"ingles"}) 
+
+//Equivalencia no SQL server
+select a.* 
+       h.nome 
+    from 
+        alunos a  
+    join 
+        habilidades h 
+    on 
+        a.habilidade_id = h.habilidade_id 
+    where 
+        a.nome ='james' 
+    and 
+        h.nome = 'ingles'
+
+//removendo
+db.alunos.remove({"_id": ObjectId("5a8a06fbc6e22a0c64e0ffd7")})

@@ -1,0 +1,32 @@
+//primeiro parametro query
+//segundo parametro object que vai ser alterado
+//terceiro se vai atualizar todos os documentos, por 
+padrao so altera o primeiro encontrato. por padrao e falso.
+db.alunos.update({},{},{})
+
+//tenho dois mas vai atualizar apenas um( o primeiro)
+db.alunos.update(
+    {"cursos.nome":"Sistema de informacoe"},
+    {
+        $set:{
+            "cursos.nome":"Sistema de informacao"
+        }
+
+   })
+
+   //tenho dois e vai atualiar os dois
+   db.alunos.update(
+        {"cursos.nome":"Sistema de informacao"},
+        {
+            $set:{
+                "cursos.nome":"Sistema De Informacao"
+            }
+
+        },
+        {
+            multi:true
+        }
+    )
+
+multi por padrao e falso, quando mudo para true ele vai atualizar 
+todos os registros encontrados, quando falso so o primeiro.
