@@ -1,0 +1,53 @@
+mongoimport -c alunos --jsonArray < alunos.json;
+
+
+mongoimport -c alunos --jsonArray < alunos.json;
+
+mongoimport --db dbName --collection collectionName --file fileName.json --jsonArray
+mongoimport --db test --collection alunos --file alunos.json --jsonArray
+
+Para importar arquivos para o MongoDB usamos o comando mongoimportcom os parâmetros -c nome da coleção e --jsonArray < nome do arquivo .json
+
+mongoimport -c alunos --jsonArray < alunos.json
+
+query 1 
+
+db.alunos.aggregate([{
+    $geoNear:{
+        "near": {
+            "coordinates":[-23.588055, -46.632403],
+            "type":"Point"
+},
+"distanceField": "distancia.calculada",
+"spherical": true
+}
+}]
+
+
+query 2
+
+db.alunos.aggregate([{
+    "$geoNear":{
+        "near": {
+            "coordinates":[-23.588055, -46.632403],
+            "type":"Point"
+},
+"distanceField": "distancia.calculada",
+"spherical": true,
+"num":4
+}
+}])
+
+query 3
+db.alunos.aggregate([{
+    "$geoNear": {
+      "near": {
+        "coordinates":[-23.588055, -46.632403],
+        "type":"Point"
+      },
+    "distanceField": "distancia.calculada",
+    "spherical": true
+    }
+  },
+  { $skip: 1 }
+]);

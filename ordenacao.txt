@@ -1,0 +1,26 @@
+//pessoas que tenha a nota === 8
+db.alunos.find({"notas":8}) 
+
+//pessoas que tenha notas > 8
+db.alunos.find({"notas":{
+    $gt:9
+}}) 
+
+
+//top 1
+db.alunos.findOne({"notas":{
+    $gt:9
+}}) 
+
+
+//order alfabetica a-z
+db.alunos.find().sort({"nome":1})
+
+//order alfabetica z-a
+db.alunos.find().sort({"nome": -1})
+
+//order alfabetica z-a top 3
+db.alunos.find().sort({"nome": -1}).limit(3)
+
+
+
