@@ -1,0 +1,18 @@
+$project
+analogo ao SELECT do sql server.
+vc defini quais campos quer trazer.
+
+
+$project: projeção, vc cria uma novo documento  com campos que 
+seleciona na query:
+
+db.products.aggrete([{$project:{_id:0, "maker":{$toLower:"$manufacturer"}, 
+		 		"datails":{"category":"$categoria"
+				 "price":{$mutiply":["$price",10]},
+				  "item":"$name"}}}])
+
+
+minha
+db.zips.aggregate([{$project:{"city":"$city", "pop":"$pop","state":"$state", "zip":"$_id"}}])
+correta
+db.zips.aggregate([{$project:{_id:0, city:{$toLower:"$city"}, pop:1, state:1, zip:"$_id"}}])

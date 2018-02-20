@@ -1,0 +1,3 @@
+ db.collection.find().explain()
+
+analogo ao execute plain do sql server.

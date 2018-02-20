@@ -1,0 +1,4 @@
+ordernação
+
+db.orders.find().sort( { amount: -1 } )
+db.orders.find().sort( { "item.category": 1, "item.type": 1 } )

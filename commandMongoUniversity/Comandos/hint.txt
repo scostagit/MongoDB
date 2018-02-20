@@ -1,0 +1,7 @@
+forca o banco de dados a pesquisar pelos indices em grandes consultas
+
+db.students.find({student_Id:{$gt:5000}, classId:54}).sort({studentId:1}).hint({class_id})
+
+
+O operador $ dica força o otimizador de consulta a usar um índice
+ específico para cumprir a consulta. Especificar o índice seja pelo nome de índice ou por documento .

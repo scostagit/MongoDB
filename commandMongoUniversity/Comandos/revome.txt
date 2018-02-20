@@ -1,0 +1,8 @@
+remove
+drop
+
+db.scores.remove({score:{$lt:60}})
+
+db.scores.drop();
+
+

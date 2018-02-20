@@ -1,0 +1,6 @@
+$set
+db.people.update({nome:"sergio"}, {$set:{ email:"teste@hotmail.com}});
+
+db.people.update({nome:"sergio"}, {$inc:{ age:1}});
+
+db.users.update({"username": "splunker"}, {$set:{"country":"RU"}});

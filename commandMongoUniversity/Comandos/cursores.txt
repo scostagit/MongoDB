@@ -1,0 +1,15 @@
+cur = db.people.finf(); null;
+cur.hasNext();
+true
+
+cur.next();
+
+while(cur.hasNext()) printjson(cur.next());
+
+cur.sort({name:-1}); null;
+
+cur.limit(5);
+
+cur.limit(5).skip(2);
+
+cur.sort({name:-1}).limit(5).skip(2); null;

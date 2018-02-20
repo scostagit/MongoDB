@@ -1,0 +1,32 @@
+$unwind
+
+semelhente ao pivot
+transforma linhas em colunas
+
+document
+{ "_id" : 1, "item" : "ABC1", sizes: [ "S", "M", "L"] }
+
+query
+db.inventory.aggregate( [ { $unwind : "$sizes" } ] )
+
+result
+{ "_id" : 1, "item" : "ABC1", "sizes" : "S" }
+{ "_id" : 1, "item" : "ABC1", "sizes" : "M" }
+{ "_id" : 1, "item" : "ABC1", "sizes" : "L" }
+
+
+
+
+db.people.find()
+{ "_id" : "Will", "likes" : [ "physics", "MongoDB", "indexes" ] }
+{ "_id" : "Dwight", "likes" : [ "starting companies", "restaurants", "MongoDB" ] }
+
+
+physics
+MongoDB
+indexes
+starting companies
+restaurants
+
+
+ele usa o $push para recriar o novo documemto.

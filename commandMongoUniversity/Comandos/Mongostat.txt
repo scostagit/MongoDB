@@ -1,0 +1,7 @@
+Mongostat 
+
+
+O utilitário mongostat fornece uma visão geral do status de um mongod ou mongos instância 
+atualmente em execução .
+ mongostat é funcionalmente semelhante ao utilitário sistema de arquivos 
+vmstat UNIX / Linux , mas fornece dados sobre casos mongod e Mongos .

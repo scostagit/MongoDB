@@ -1,0 +1,6 @@
+$push
+
+$aggregate([{$group:{
+			_id:{"$manufaturer"},
+		catetories{ $push:"$catory"}
+		    }}])

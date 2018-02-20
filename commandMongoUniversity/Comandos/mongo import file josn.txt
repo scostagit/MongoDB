@@ -1,0 +1,6 @@
+mongoimport -d students < grades.json
+
+mongoimport -d school -c students < students.json
+
+
+mongoimport --db students --collection grades --file C:\TI\NoSQL\MONGO_DB\CursoMongoDB\MongoDB\Server\bin\grades.json

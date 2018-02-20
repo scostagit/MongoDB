@@ -1,0 +1,21 @@
+$geometry
+
+
+
+Alterado na versão 3.0: Adicionar suporte para especificar polígonos do GeoJSON de anel único , com áreas superiores a um único hemisfério .
+
+O operador $ geometria especifica uma geometria GeoJSON para uso com os seguintes operadores 
+geoespaciais de consulta : $ geoWithin , $ geoIntersects , $ próximos , e US $ nearSphere .
+
+$ Geometria utiliza EPSG : 4326 como o padrão do sistema de referência de coordenadas (CRS) .:
+
+db.stores.find({
+    loc:{
+ $near: {
+     $geometry: {
+  type: "Point", 
+  coordinates: [-130, 39]}, 
+    $maxDistance:1000000
+ }
+    }
+})

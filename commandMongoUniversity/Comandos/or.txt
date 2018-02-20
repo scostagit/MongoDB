@@ -1,0 +1,24 @@
+$or
+
+igual ao or do SQL
+
+db.people.find({$or:[{name:{$regex:"A}, email:{$exists:true}}]});
+
+{ $or: [ { <expression1> }, { <expression2> }, ... , { <expressionN> } ] }
+
+
+db.scores.find({$or:[ { score:{$lt:50}}, {score:{$gt:90}}]});
+
+$and igual o and do SQL, sitaxe igual de cima.7
+
+
+
+$all, $in
+
+db.scores.find({$all:[50,60]});
+
+db.scores.find({$in:[50,60]});
+
+db.users.find( { friends : { $all : [ "Joe" , "Bob" ] }, favorites : { $in : [ "running" , "pickles" ] } } )
+
+db.catalog.find({"price":{$gt:10000},  "reviews.rating":{$gte:5}});

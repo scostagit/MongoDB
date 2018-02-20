@@ -1,0 +1,8 @@
+db.students.aggregate( { '$unwind' : '$scores' } , { '$group' : { '_id' : '$_id' , 'average' : { $avg : '$scores.score' } } } , { '$sort' : { 'average' : -1 } } , { '$limit' : 1 } )
+db.students.aggregate({'$unwind':'$scores'},{'$group':{'_id':'$_id', 'average':{$avg:'$scores.score'}}}, {'$sort':{'average':-1}}, {'$limit':1})
+
+
+
+
+scores: [{u'score': 82.11742562118049, u'type': u'exam'}, {u'score': 49.61295450928224, u'type': u'quiz'}, {u'score': 28.86823689842918, u'type': u'homework'}, {u'score': 5.861613903793295, u'type': u'homework'}]
+new scores: [{u'score': 82.11742562118049, u'type': u'exam'}, {u'score': 49.61295450928224, u'type': u'quiz'}, {u'score': 28.86823689842918, u'type': u'homework'}]

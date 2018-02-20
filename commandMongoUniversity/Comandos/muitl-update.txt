@@ -1,0 +1,2 @@
+$multi-update:true
+db.scores.update({'score': {$lt: 70}}, {$inc: {score:20}}, {multi:true});

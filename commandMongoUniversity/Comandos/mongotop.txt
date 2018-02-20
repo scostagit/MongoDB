@@ -1,0 +1,4 @@
+mongotop fornece um método para controlar a quantidade de tempo que uma instância MongoDB 
+gasta leitura e escrita de dados. 
+mongotop fornece estatísticas sobre um nível por coleção. 
+Por padrão, mongotop retorna valores a cada segundo.

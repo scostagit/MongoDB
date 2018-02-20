@@ -1,0 +1,2 @@
+quando nao tem cria o documento na collection
+db.foo.update( { username : 'bar' }, { '$set' : { 'interests': [ 'cat' , 'dog' ] } } , { upsert : true } );

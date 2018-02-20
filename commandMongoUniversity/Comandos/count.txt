@@ -1,0 +1,3 @@
+db.scorres.count({type:"exam"});
+
+db.scores.count({"type":"essay", "score":{$gt:90}});

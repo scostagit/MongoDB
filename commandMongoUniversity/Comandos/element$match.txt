@@ -1,0 +1,10 @@
+comanando para busca colletcions com subIndex
+
+Criar index de subCollection:
+db.students.createIndex({'scores.scpre':1});
+index descrente.
+db.people.createIndex({'work_history.company':-1});
+
+
+consulta subindex usamos o $elemMatch
+db.students.find({'scores':{$elemMatch:{type:'exam', score:{'$gt':99.8}}}});

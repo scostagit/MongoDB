@@ -1,0 +1,2 @@
+rs.slaveOk()
+comando para ler na base secundaria.

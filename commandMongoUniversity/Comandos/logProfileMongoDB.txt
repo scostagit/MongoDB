@@ -1,0 +1,18 @@
+db.students.find({student_id:10000})
+
+db.system.profile.find().pretty()
+
+db.getProfilingLeverl()
+obtem o nivel de profile.
+
+
+Modifica o nível profiler banco de dados atual usado pelo sistema de banco de dados 
+de perfis para capturar dados sobre o desempenho . O método proporciona um invólucro
+ em torno do perfil de comando do banco de dados .
+
+db.setProfilingLevel(level, slowms)
+ex:
+db.setProfilingLevel(1, 4)
+
+
+db.system.profile.find({"millis":{"$gt":1000}}).sort({ts:-1})

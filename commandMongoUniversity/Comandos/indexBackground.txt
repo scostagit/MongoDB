@@ -1,0 +1,7 @@
+index rodando em brackground
+
+quando criamos index para um collecton que contenha 10 bilhoes de registros.
+nao conseguimos dar um Find()'select' porque ele trava o banco até a criacao dos index.
+
+para que isso nao aconteca, criamos os indexs em segundo plano para travar o primeiro.
+db.collection.createIndex( { a: 1 }, { background: true } )

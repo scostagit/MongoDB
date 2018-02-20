@@ -1,0 +1,20 @@
+AVg medio
+
+
+id e nm_products sao campos qeu estou criando agora.
+$"nome do campo" 
+$sum: função de que conta o tataol de produtos.
+
+db.products.aggregate([
+			{$group:
+				{
+					id: {"$category"}, 
+					avg_prices:{$avg:"$price"}
+				}
+			 }
+		      ]);
+
+
+
+
+db.zips.aggregate([{"$group":{"_id":"$state", "population":{$avg:"$pop"}}

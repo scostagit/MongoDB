@@ -1,0 +1,51 @@
+Group by
+
+
+id e nm_products sao campos qeu estou criando agora.
+$"nome do campo" 
+$sum: função de que conta o tataol de produtos.
+
+db.products.aggregate([{$group:{id:"$manufacurer", nm_products:{$sum:1}}}]);
+
+
+db.products.aggregate([{$group:{"_id":"$category", "num_products":{"$sum":1}}}]);
+db.products.aggregate([{$group:{"_id":"$category", "num_products":{"$sum":1}}}])
+
+
+chave composta
+
+db.products.aggregate([{$group:{
+					id:{"$manufacurer", "$category"},
+				 	nm_products:{$sum:1}
+				}	
+			}]);
+
+
+
+
+
+podemos criar o alias para os campos:
+db.products.aggregate([{$group:{
+					id:{
+						"maker":	"$manufacurer", 
+						"category": 	"$category"},
+				 	nm_products:{$sum:1}
+				}	
+			}]);
+
+
+
+
+
+Agregaççoes
+$sum -> soma
+$avg -> media
+$min -> valor minimo
+$max -> valor maximo
+$push-> inseri
+$addToSet ->
+$firts = primeiro
+$last -> ultmo
+
+
+db.zips.aggregate([{"$group":{"_id":"$state", "population":{$sum:"$pop"}}}])

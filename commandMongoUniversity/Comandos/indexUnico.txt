@@ -1,0 +1,6 @@
+criacao de index unico é analogo ao Unique no SQL serve
+
+db.students.createIndex({student_id:1}, {unique:true});
+
+
+db.students.createIndex({"student_id":1,  "class_id":1},{"unique":true});

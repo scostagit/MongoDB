@@ -1,0 +1,16 @@
+delete um campo da colletion (documento)
+
+db.products.update(
+   { sku: "unknown" },
+   { $unset: { quantity: "", instock: "" } }
+)
+
+
+
+Faça uma consulta de actualização que irá retirar a chave de interesses nos seguintes documentos,
+ em que os usuários de cobrança.
+
+db.users.update({'username': 'jimmy'}, {'$unset': {'interests': 1}});
+
+The find part, {'username': 'jimmy'}, finds the user document we want to update, 
+and the update part, {'$unset': {'interests': 1}}, removes the interests field.

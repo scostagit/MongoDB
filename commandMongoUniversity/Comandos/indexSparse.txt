@@ -1,0 +1,8 @@
+
+índices esparsos contêm somente entradas para documentos que tenham o campo indexado , 
+mesmo que o campo de índice contém um valor nulo. O índice salta sobre qualquer documento que
+ está faltando o campo indexado . O índice é " escasso ", porque não inclui todos os documentos 
+de uma coleção. Em contrapartida , os índices de não-esparsos conter todos os documentos 
+em uma coleção , armazenar valores nulos para os documentos que não contêm o campo indexado .
+
+db.addresses.createIndex( { "xmpp_id": 1 }, { sparse: true } )

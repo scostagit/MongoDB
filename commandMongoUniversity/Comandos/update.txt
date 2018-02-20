@@ -1,0 +1,3 @@
+db.people.update({nome:"sergio"}, {nome:"sergio costa", email:"teste@hotmail.com});
+
+db.users.update({"username": "splunker"}, {$set:{"country":"RU"}});

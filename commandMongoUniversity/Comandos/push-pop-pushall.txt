@@ -1,0 +1,4 @@
+db.friends.update( { _id : "Mike" }, { $push : { interests : "skydiving" } } );
+db.friends.update( { _id : "Mike" }, { $pop : { interests : -1 } } );
+db.friends.update( { _id : "Mike" }, { $addToSet : { interests : "skydiving" } } );
+db.friends.update( { _id : "Mike" }, { $pushAll: { interests : [ "skydiving" , "skiing" ] } } );

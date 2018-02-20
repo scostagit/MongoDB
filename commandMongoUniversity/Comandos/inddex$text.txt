@@ -1,0 +1,7 @@
+criacao do index de busca
+
+db.sentece.ensureIntext({'words':'text'})
+
+query
+
+db.setences.find({$text:{$search:'dog'}})

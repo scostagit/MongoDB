@@ -1,0 +1,7 @@
+db.posts.createIndex({"Content":1, "Title":1, "Author":1});
+
+
+db.posts.createIndex({'tags':1});
+
+
+db.posts.ensureIndex({ CreateAtUtc: -1})
